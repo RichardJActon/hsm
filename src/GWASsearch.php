@@ -14,7 +14,7 @@
 	}
 
 	/*get GWAS association search suggestions*/
-	$sql = 'SELECT annotationIDpairs.annotation FROM hsm2.annotationIDpairs WHERE annotationIDpairs.annotation LIKE "%'.$_REQUEST['query'].'%" GROUP BY annotation';
+	$sql = 'SELECT annotationIDpairs.annotation FROM epigenome.annotationIDpairs WHERE annotationIDpairs.annotation LIKE "%'.$_REQUEST['query'].'%" GROUP BY annotation';
 	
 	$result = $conn->query($sql);
 	

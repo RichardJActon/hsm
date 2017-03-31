@@ -17,7 +17,7 @@
 	$array = preg_split("/[:|-]/", $_REQUEST['query']);
 
 	/*get positions of LD blocks to suggest as coordinates based searches*/
-	$sql = 'SELECT hsm2.LD_Block.chr, hsm2.LD_Block.start, hsm2.LD_Block.stop FROM hsm2.LD_Block WHERE (hsm2.LD_Block.chr LIKE "%' . $array[0] . '%" AND hsm2.LD_Block.start LIKE "%' . $array[1] . '%" AND hsm2.LD_Block.stop LIKE "%' . $array[2] . '%")';
+	$sql = 'SELECT epigenome.LD_Block.chr, epigenome.LD_Block.start, epigenome.LD_Block.stop FROM epigenome.LD_Block WHERE (epigenome.LD_Block.chr LIKE "%' . $array[0] . '%" AND epigenome.LD_Block.start LIKE "%' . $array[1] . '%" AND epigenome.LD_Block.stop LIKE "%' . $array[2] . '%")';
 
 	$result = $conn->query($sql);
 	

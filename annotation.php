@@ -55,7 +55,7 @@
 	{
 		die("<div class='alert alert-danger'><strong>ERROR!</strong> MYSQL connection failed: " . mysqli_connect_error()."</div>");
 	}
-	$Csql = 'SELECT COUNT(SNP) AS "count" FROM hsm2.annotationIDpairs WHERE annotation = "'.$_GET["annotation"].'"';
+	$Csql = 'SELECT COUNT(SNP) AS "count" FROM epigenome.annotationIDpairs WHERE annotation = "'.$_GET["annotation"].'"';
 	//echo "<p>$Csql</p>";
 	$result = $conn->query($Csql);
 	$hitCount = $result->fetch_assoc();

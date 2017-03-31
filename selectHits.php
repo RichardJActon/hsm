@@ -1,4 +1,4 @@
-<?php   include("./src/functions.php"); ?>
+<?php include("./src/functions.php"); ?>
 <!DOCTYPE html>
 
 <?php get_header(); ?>
@@ -36,7 +36,7 @@
 		die("<div class='alert alert-danger'><strong>ERROR!</strong> MYSQL connection failed: " . mysqli_connect_error()."</div>");
 	}
 
-	$Csql = 'SELECT COUNT(SNP) AS "count" FROM hsm2.SNP WHERE SNP IN("rs7531118","rs1516725","rs180242","rs2388896","rs6469804","rs4147929","rs10499194","rs3129934","rs2248359","rs17356907","rs2823093","rs3802842","rs45430","rs4775302")';
+	$Csql = 'SELECT COUNT(SNP) AS "count" FROM epigenome.SNP WHERE SNP IN("rs7531118","rs1516725","rs180242","rs2388896","rs6469804","rs4147929","rs10499194","rs3129934","rs2248359","rs17356907","rs2823093","rs3802842","rs45430","rs4775302")';
 	//echo "<p>$Csql</p>";
 	$result = $conn->query($Csql);
 	$hitCount = $result->fetch_assoc();

@@ -14,7 +14,7 @@
 	}
 
 	/*get gene name search suggestions*/
-	$sql = 'SELECT geneIDpairs.gene FROM hsm2.geneIDpairs WHERE geneIDpairs.gene LIKE "%' . $_REQUEST['query'] . '%" GROUP BY gene';
+	$sql = 'SELECT geneIDpairs.gene FROM epigenome.geneIDpairs WHERE geneIDpairs.gene LIKE "%' . $_REQUEST['query'] . '%" GROUP BY gene';
 	
 	$result = $conn->query($sql);
 	

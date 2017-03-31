@@ -14,8 +14,8 @@
 	}
 
 	/*get gene name search suggestions*/
-	//$sql = 'SELECT hsm2.SNP.SNP,hsm2.geneIDpairs.gene FROM hsm2.geneIDpairs,hsm2.SNP WHERE (hsm2.geneIDpairs.gene LIKE "%' . $_REQUEST['query'] . '%" OR hsm2.SNP.SNP LIKE "%' . $_REQUEST['query'] . '%") AND hsm2.SNP.SNP=hsm2.geneIDpairs.SNP;';
-	$sql = 'SELECT hsm2.SNP.SNP FROM hsm2.SNP WHERE hsm2.SNP.SNP LIKE "%' . $_REQUEST['query'] . '%"';
+	//$sql = 'SELECT epigenome.SNP.SNP,epigenome.geneIDpairs.gene FROM epigenome.geneIDpairs,epigenome.SNP WHERE (epigenome.geneIDpairs.gene LIKE "%' . $_REQUEST['query'] . '%" OR epigenome.SNP.SNP LIKE "%' . $_REQUEST['query'] . '%") AND epigenome.SNP.SNP=epigenome.geneIDpairs.SNP;';
+	$sql = 'SELECT epigenome.SNP.SNP FROM epigenome.SNP WHERE epigenome.SNP.SNP LIKE "%' . $_REQUEST['query'] . '%"';
 	
 	$result = $conn->query($sql);
 	

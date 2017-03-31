@@ -257,11 +257,11 @@ NB uses a MYSQL connection (makes 2 requests per initial result from an initial 
 */
 function get_list($sqli,$start)
 {
-	$serverName = "localhost";
-	$userName = "webuser";
-	$password = "webuser";
-	$database = "hsm2";
-
+	$serverName = $databaseServer;
+	$userName = $databaseUserName;
+	$password = $databasePassword;
+	$database = $databaseName;
+	
 	$conn = mysqli_connect($serverName, $userName, $password, $database);
 	if(!$conn)
 	{
@@ -275,7 +275,7 @@ function get_list($sqli,$start)
 	$html = "";
 	while($row = $result->fetch_assoc())
 	{
-		$sqlGene = 'SELECT gene FROM hsm2.geneIDpairs WHERE geneIDpairs.SNP="'.$row["SNP"].'";';
+		$sqlGene = 'SELECT gene FROM epigenome.geneIDpairs WHERE geneIDpairs.SNP="'.$row["SNP"].'";';
 		$resGene = $conn->query($sqlGene);
 		$geneCount = 0;
 		$Ghtml = "";
@@ -285,7 +285,7 @@ function get_list($sqli,$start)
 			$geneCount++;
 		};
 
-		$sqlAn = 'SELECT annotation FROM hsm2.annotationIDpairs WHERE annotationIDpairs.SNP="'.$row["SNP"].'";';
+		$sqlAn = 'SELECT annotation FROM epigenome.annotationIDpairs WHERE annotationIDpairs.SNP="'.$row["SNP"].'";';
 		$resAn = $conn->query($sqlAn);
 		$annCount = 0;
 		$Ahtml = "";

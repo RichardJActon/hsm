@@ -42,7 +42,7 @@
 	}
 	
 	/*query to retrieve filenames, LD block info and position info for a SNP*/
-	$sql = 'SELECT hsm2.files.dataFilename, hsm2.files.pValFilename, hsm2.files.pValPDFfilename, hsm2.SNP.SNP,hsm2.SNP.chr AS "SNP.chr",hsm2.SNP.start AS "SNP.start",hsm2.SNP.stop AS "SNP.stop",hsm2.LD_Block.chr AS "ld.chr",hsm2.LD_Block.start AS "ld.start",hsm2.LD_Block.stop AS "ld.stop" FROM hsm2.SNP,hsm2.RefSNPpairs,hsm2.LD_Block,files WHERE RefSNPpairs.SNP = "'. $pos[0] . '" AND RefSNPpairs.Ref_SNP=LD_Block.Ref_SNP AND RefSNPpairs.SNP = SNP.SNP AND files.SNP=SNP.SNP;';
+	$sql = 'SELECT epigenome.files.dataFilename, epigenome.files.pValFilename, epigenome.files.pValPDFfilename, epigenome.SNP.SNP,epigenome.SNP.chr AS "SNP.chr",epigenome.SNP.start AS "SNP.start",epigenome.SNP.stop AS "SNP.stop",epigenome.LD_Block.chr AS "ld.chr",epigenome.LD_Block.start AS "ld.start",epigenome.LD_Block.stop AS "ld.stop" FROM epigenome.SNP,epigenome.RefSNPpairs,epigenome.LD_Block,files WHERE RefSNPpairs.SNP = "'. $pos[0] . '" AND RefSNPpairs.Ref_SNP=LD_Block.Ref_SNP AND RefSNPpairs.SNP = SNP.SNP AND files.SNP=SNP.SNP;';
 
 	$result = $conn->query($sql);
 	
@@ -161,7 +161,7 @@
 										<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
 											<strong>Genes</strong><p>
 												<ul>';
-												$sqlGene = 'SELECT gene FROM hsm2.geneIDpairs WHERE geneIDpairs.SNP="'.$pos[0].'";';
+												$sqlGene = 'SELECT gene FROM epigenome.geneIDpairs WHERE geneIDpairs.SNP="'.$pos[0].'";';
 												$resGene = $conn->query($sqlGene);
 												while ($rowG = $resGene->fetch_assoc()) 
 												{
@@ -173,7 +173,7 @@
 										<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
 											<strong>GWAS disease/phenotype</strong><p>
 											<ul>';
-												$sqlAn = 'SELECT annotation FROM hsm2.annotationIDpairs WHERE annotationIDpairs.SNP="'.$pos[0].'";';
+												$sqlAn = 'SELECT annotation FROM epigenome.annotationIDpairs WHERE annotationIDpairs.SNP="'.$pos[0].'";';
 												$resAn = $conn->query($sqlAn);
 												while ($rowA = $resAn->fetch_assoc()) 
 												{

@@ -23,12 +23,12 @@
 	}
 	
 	/*select random SNP from the database*/
-	$sql1 = 'SELECT SNP from hsm2.SNP ORDER BY RAND() LIMIT 1;';
+	$sql1 = 'SELECT SNP from epigenome.SNP ORDER BY RAND() LIMIT 1;';
 	$result1 = $conn->query($sql1);
 	$row1 = $result1->fetch_assoc();
 
 	/*query to retrieve filenames, LD block info and position info for a SNP*/	
-	$sql = 'SELECT hsm2.files.dataFilename, hsm2.files.pValFilename, hsm2.files.pValPDFfilename, hsm2.SNP.SNP,hsm2.SNP.chr AS "SNP.chr",hsm2.SNP.start AS "SNP.start",hsm2.SNP.stop AS "SNP.stop",hsm2.LD_Block.chr AS "ld.chr",hsm2.LD_Block.start AS "ld.start",hsm2.LD_Block.stop AS "ld.stop" FROM hsm2.SNP,hsm2.RefSNPpairs,hsm2.LD_Block,files WHERE hsm2.RefSNPpairs.SNP = "'. $row1["SNP"] . '" AND hsm2.RefSNPpairs.Ref_SNP=hsm2.LD_Block.Ref_SNP AND hsm2.RefSNPpairs.SNP = hsm2.SNP.SNP AND hsm2.files.SNP=hsm2.SNP.SNP;';
+	$sql = 'SELECT epigenome.files.dataFilename, epigenome.files.pValFilename, epigenome.files.pValPDFfilename, epigenome.SNP.SNP,epigenome.SNP.chr AS "SNP.chr",epigenome.SNP.start AS "SNP.start",epigenome.SNP.stop AS "SNP.stop",epigenome.LD_Block.chr AS "ld.chr",epigenome.LD_Block.start AS "ld.start",epigenome.LD_Block.stop AS "ld.stop" FROM epigenome.SNP,epigenome.RefSNPpairs,epigenome.LD_Block,files WHERE epigenome.RefSNPpairs.SNP = "'. $row1["SNP"] . '" AND epigenome.RefSNPpairs.Ref_SNP=epigenome.LD_Block.Ref_SNP AND epigenome.RefSNPpairs.SNP = epigenome.SNP.SNP AND epigenome.files.SNP=epigenome.SNP.SNP;';
 	$result = $conn->query($sql);
 ?>
 
@@ -148,7 +148,7 @@
 										<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
 											<strong>Genes</strong><p>
 												<ul>';
-												$sqlGene = 'SELECT gene FROM hsm2.geneIDpairs WHERE geneIDpairs.SNP="'.$row['SNP'].'";';
+												$sqlGene = 'SELECT gene FROM epigenome.geneIDpairs WHERE geneIDpairs.SNP="'.$row['SNP'].'";';
 												$resGene = $conn->query($sqlGene);
 												while ($rowG = $resGene->fetch_assoc()) 
 												{
@@ -160,7 +160,7 @@
 										<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
 											<strong>GWAS disease/phenotype</strong><p>
 											<ul>';
-												$sqlAn = 'SELECT annotation FROM hsm2.annotationIDpairs WHERE annotationIDpairs.SNP="'.$row['SNP'].'";';
+												$sqlAn = 'SELECT annotation FROM epigenome.annotationIDpairs WHERE annotationIDpairs.SNP="'.$row['SNP'].'";';
 												$resAn = $conn->query($sqlAn);
 												while ($rowA = $resAn->fetch_assoc()) 
 												{

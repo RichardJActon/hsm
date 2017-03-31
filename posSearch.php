@@ -71,7 +71,7 @@
 		
 		die("<div class='alert alert-danger'><strong>ERROR!</strong> MYSQL connection failed: " . mysqli_connect_error()."</div>");
 	}
-	$Csql = 'SELECT COUNT(SNP) AS "count" FROM hsm2.SNP WHERE chr = "'.$pos[0].'" AND start >= '.$pos[1].' AND stop <= '.$pos[2];
+	$Csql = 'SELECT COUNT(SNP) AS "count" FROM epigenome.SNP WHERE chr = "'.$pos[0].'" AND start >= '.$pos[1].' AND stop <= '.$pos[2];
 	//echo "<p>$Csql</p>";
 	$result = $conn->query($Csql);
 	$hitCount = $result->fetch_assoc();
