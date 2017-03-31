@@ -21,7 +21,7 @@
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<ul>
 				<li><a href="/hsm/data/dataFiles/">All Data files - by SNP</a></li>
-				<li><a href="/hsm/data/dataFilesChr/">All Data files - by Chromosome</a></li>
+				<!--<li><a href="/hsm/data/dataFilesChr/">All Data files - by Chromosome</a></li>-->
 				<li><a href="/hsm/data/pValPosGraphs/">p-Value Graphs (.png) - by SNP</a></li>
 				<li><a href="/hsm/data/pValGraphs_pdf/">p-Value Graphs (.pdf) - by SNP</a></li>
 			</ul>
