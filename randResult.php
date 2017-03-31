@@ -1,4 +1,4 @@
-<?php   include($_SERVER['DOCUMENT_ROOT']."/hsm/src/functions.php"); ?>
+<?php   include($_SERVER['DOCUMENT_ROOT']."./src/functions.php"); ?>
 <!DOCTYPE html>
 
 <?php get_header(); ?>

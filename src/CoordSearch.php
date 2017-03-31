@@ -1,7 +1,7 @@
 <?php
 	/*Search suggestion results for coordinates based searches*/
 	/*connect to database, check connection and print error if fails*/
-	include($_SERVER['DOCUMENT_ROOT']."/hsm/src/functions.php");
+	include($_SERVER['DOCUMENT_ROOT']."./functions.php");
 	$serverName = $databaseServer;
 	$userName = $databaseUserName;
 	$password = $databasePassword;
