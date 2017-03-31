@@ -41,7 +41,7 @@
 	</div>
 </div>
 
-<div class="container-fluid" style="text-align: center; margin-top: 7em">
+<div class="container-fluid" style="text-align: center; margin-top: 7em; margin-bottom: 7em">
 	<div class="row-fluid">
 		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<a href="http://www.southampton.ac.uk/"><img src="./img/soton.gif" height="150em"></a>
