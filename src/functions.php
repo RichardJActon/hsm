@@ -35,15 +35,15 @@ function get_header()
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<link rel="stylesheet" href="./css/hsm.css">
-		<!--<link rel="stylesheet" href="./bootstrap.min.css">-->
+		<!--<link rel="stylesheet" href="./css/bootstrap.min.css">-->
 		<!-- jQuery library -->
 		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>-->
-		<script src="./js/jquery.min.js"></script>
+		<script src="./src/js/jquery.min.js"></script>
 		<!-- Latest compiled JavaScript -->
 		<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
-		<script src="./js/bootstrap.min.js"></script>
-		<!--<script src="./js/typeahead.js"></script>-->
-		<script src="./js/typeahead.bundle.min.js"></script>
+		<script src="./src/js/bootstrap.min.js"></script>
+		<!--<script src="./src/js/typeahead.js"></script>-->
+		<script src="./src/js/typeahead.bundle.min.js"></script>
 	</head>
 	<style type="text/css">
 		@media (max-width: 1136px) 
