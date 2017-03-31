@@ -1,7 +1,11 @@
 <?php 
 
-/*# functions.php
-## `get_header()` function
+/*# functions.php*/
+$databaseServer = "srv01779.soton.ac.uk:3306";
+$databaseName = "epigenome";
+$databaseUserName = "epigenome_ro";
+$databasePassword = "3dfa315f63c477d4f2f68bac84eaa7e7f135da26";
+/*## `get_header()` function
 ### Args
 - none
 

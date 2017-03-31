@@ -25,11 +25,11 @@
 
 <?php
 	/*get total number of results*/
-	$serverName = "localhost";
-	$userName = "webuser";
-	$password = "webuser";
-	$database = "hsm2";
-
+	$serverName = $databaseServer;
+	$userName = $databaseUserName;
+	$password = $databasePassword;
+	$database = $databaseName;
+	
 	$conn = mysqli_connect($serverName, $userName, $password, $database);
 	if(!$conn)
 	{

@@ -1,10 +1,11 @@
 <?php
 	/*Search suggestion results for gene name based searches*/
 	/*connect to database, check connection and print error if fails*/
-	$serverName = "localhost";
-	$userName = "webuser";
-	$password = "webuser";
-	$database = "hsm2";
+	include($_SERVER['DOCUMENT_ROOT']."/hsm/src/functions.php");
+	$serverName = $databaseServer;
+	$userName = $databaseUserName;
+	$password = $databasePassword;
+	$database = $databaseName;
 
 	$conn = mysqli_connect($serverName, $userName, $password, $database);
 	if(!$conn)
