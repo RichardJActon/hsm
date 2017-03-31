@@ -69,7 +69,7 @@
 	if(!$conn)
 	{
 		
-		die("<div class='alert alert-danger'><strong>ERROR!</strong> MYSQL connection failed: " . mysqli_connect_error()."</div>");
+		die("<div class='alert alert-danger'><strong>ERROR!</strong> posSearch MYSQL connection failed: " . mysqli_connect_error()."</div>");
 	}
 	$Csql = 'SELECT COUNT(SNP) AS "count" FROM epigenome.SNP WHERE chr = "'.$pos[0].'" AND start >= '.$pos[1].' AND stop <= '.$pos[2];
 	//echo "<p>$Csql</p>";
