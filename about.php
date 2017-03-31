@@ -44,10 +44,10 @@
 <div class="container-fluid" style="text-align: center; margin-top: 7em">
 	<div class="row-fluid">
 		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-			<a href="http://www.southampton.ac.uk/"><img src="./soton.gif" height="150em"></a>
+			<a href="http://www.southampton.ac.uk/"><img src="./img/soton.gif" height="150em"></a>
 		</div>
 		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-			<a href="http://www.mrc.soton.ac.uk/web2/"><img src="./WG10-RGB-LEU.png" height="100em"></a>
+			<a href="http://www.mrc.soton.ac.uk/web2/"><img src="./img/WG10-RGB-LEU.png" height="100em"></a>
 		</div>
 	</div>
 </div>
