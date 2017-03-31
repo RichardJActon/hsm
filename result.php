@@ -1,3 +1,4 @@
+
 <?php   include("./src/functions.php"); ?>
 <!DOCTYPE html>
 
@@ -59,7 +60,7 @@
 				<div class="page-header">
 					<h1><a href="./result.php?searchTerm='. $row["SNP"].'">'.$row["SNP"]. '</a></h1>
 					<p><strong>SNP at: ' . $row["SNP.chr"].':'.$row["SNP.start"].'-'.$row["SNP.stop"].'</strong></p>
-					<p><strong>LD Block: </strong><a href="/hsm/posSearch.php?posSearch='.$row['ld.chr'] .':'. $row['ld.start'] .'-'.$row['ld.stop'].'&limit=10&page=1">'.$row['ld.chr'] .':'. $row['ld.start'] .'-'.$row['ld.stop'].'</a></p>
+					<p><strong>LD Block: </strong><a href="./posSearch.php?posSearch='.$row['ld.chr'] .':'. $row['ld.start'] .'-'.$row['ld.stop'].'&limit=10&page=1">'.$row['ld.chr'] .':'. $row['ld.start'] .'-'.$row['ld.stop'].'</a></p>
 				</div>
 			</div>
 			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="padding-top: 2em">
