@@ -236,9 +236,7 @@ echo '
 </div>
 ';
 }
-?>
 
-<?php
 /*## `get_list()` function
 ### Args
 - $sqli: MYSQL query as string.
@@ -257,10 +255,10 @@ NB uses a MYSQL connection (makes 2 requests per initial result from an initial 
 */
 function get_list($sqli,$start)
 {
-	$databaseServer = "srv01779.soton.ac.uk:3306";
+	/*$databaseServer = "srv01779.soton.ac.uk:3306";
 	$databaseName = "epigenome";
 	$databaseUserName = "epigenome_ro";
-	$databasePassword = "3dfa315f63c477d4f2f68bac84eaa7e7f135da26";
+	$databasePassword = "3dfa315f63c477d4f2f68bac84eaa7e7f135da26";*/
 	
 	$serverName = $databaseServer;
 	$userName = $databaseUserName;
@@ -367,9 +365,6 @@ function get_list($sqli,$start)
 	return $array;
 }
 
-?>
-
-<?php
 /*## `get_title()` function
 ### Args
 - $title: page title
@@ -454,4 +449,5 @@ function createLinks($links,$list_class,$limit,$total,$page,$base)
 	$html .= '</ul>';
 	return $html;
 }
+
 ?>
