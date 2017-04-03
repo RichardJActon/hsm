@@ -12,7 +12,7 @@
 	{
 		die("<div class='alert alert-danger'><strong>ERROR!</strong> invalid download class - dataFiles, pValPosGraphs or pValGraphs_pdf ar valid download classes.</div>");
 	}
-	/*$type = $_GET["type"];
+	$type = $_GET["type"];
 	$sql = "";
 	if ($type == "dataFiles") 
 	{
@@ -25,7 +25,7 @@
 	else ($type == "pValGraphs_pdf") 
 	{
 		$sql = 'SELECT pValPDFfilename FROM files';
-	}*/
+	}
 ?>
 
 <body>
@@ -40,7 +40,7 @@
 		</div>
 
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-		<?php //get_downloads($sql,$type); ?>
+		<?php get_downloads($sql,$type); ?>
 		</div>
 		
 	</div>
