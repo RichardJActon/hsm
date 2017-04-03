@@ -266,7 +266,7 @@ function get_list($sqli,$start)
 	if(!$conn)
 	{
 		//$html = "<div class='alert alert-danger'><strong>ERROR!</strong> MYSQL connection failed: " . mysqli_connect_error()."</div>";
-		die("<div class='alert alert-danger'><strong>ERROR!</strong> MYSQL connection failed: " . mysqli_connect_error()."</div>");
+		die("<div class='alert alert-danger'><strong>ERROR!</strong> get_list MYSQL connection failed: " . mysqli_connect_error()."</div>");
 	}
 
 	$sql = $sqli;
