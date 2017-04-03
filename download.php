@@ -14,17 +14,21 @@
 	}
 	$type = $_GET["type"];
 	$sql = "";
+	$title = "";
 	if ($type == "dataFiles") 
 	{
 		$sql = 'SELECT dataFilename AS "file" FROM files';
+		$title = "Download Datafiles - txt.gz";
 	}
 	elseif ($type == "pValPosGraphs") 
 	{
 		$sql = 'SELECT pValFilename AS "file" FROM files';
+		$title = "Download PNGs";
 	}
 	else //($type == "pValGraphs_pdf") 
 	{
 		$sql = 'SELECT pValPDFfilename AS "file" FROM files';
+		$title = "Download PDFs";
 	}
 ?>
 
@@ -35,7 +39,7 @@
 
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<div class="page-header">
-				<h1>Downloads</h1>
+				<h1><?php echo '<a href="download.php?'.$type.'">'$title'</a>'?></h1>
 			</div>
 		</div>
 
