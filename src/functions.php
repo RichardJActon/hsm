@@ -257,11 +257,16 @@ NB uses a MYSQL connection (makes 2 requests per initial result from an initial 
 */
 function get_list($sqli,$start)
 {
+	$databaseServer = "srv01779.soton.ac.uk:3306";
+	$databaseName = "epigenome";
+	$databaseUserName = "epigenome_ro";
+	$databasePassword = "3dfa315f63c477d4f2f68bac84eaa7e7f135da26";
+	
 	$serverName = $databaseServer;
 	$userName = $databaseUserName;
 	$password = $databasePassword;
 	$database = $databaseName;
-	
+
 	$conn = mysqli_connect($serverName, $userName, $password, $database);
 	if(!$conn)
 	{
