@@ -472,7 +472,7 @@ function get_downloads($sql,$type)
 		$annCount++;
 	};
 	$Rhtml .= "</ul>\n";
-	return $Rhtml;
+	echo $Rhtml;
 }
 
 
