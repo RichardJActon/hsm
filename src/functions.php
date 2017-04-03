@@ -114,8 +114,9 @@ function get_footer()
 	echo '
 	<footer class="page-footer">
 		<div class="navbar navbar-default navbar-fixed-bottom">
-			<p class="text-center">University of Southampton <a href="#">DOI:</a></p>
-			<p class="text-center">Website created by <a href="http://orcid.org/0000-0002-2574-9611" target="_blank">Richard J. Acton</a></p>
+			<p class="text-center">University of Southampton <a href="#">DOI:</a>
+			&nbsp
+			Website created by <a href="http://orcid.org/0000-0002-2574-9611" target="_blank">Richard J. Acton</a></p>
 		</div>
 	</footer>
 	';
