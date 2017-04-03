@@ -8,21 +8,21 @@
 <?php get_nav_search(); ?>
 
 <?php 
-/*	if ($_GET["type"] !== ("dataFiles"||"pValPosGraphs"||"pValGraphs_pdf") )
+	if ($_GET["type"] != ("dataFiles"||"pValPosGraphs"||"pValGraphs_pdf") )
 	{
 		die("<div class='alert alert-danger'><strong>ERROR!</strong> invalid download class - dataFiles, pValPosGraphs or pValGraphs_pdf ar valid download classes.</div>");
-	}*/
+	}
 	/*$type = $_GET["type"];
 	$sql = "";
-	if ($type === "dataFiles") 
+	if ($type == "dataFiles") 
 	{
 		$sql = 'SELECT dataFilename FROM files';
 	}
-	else if ($type === "pValPosGraphs") 
+	else if ($type == "pValPosGraphs") 
 	{
 		$sql = 'SELECT pValFilename FROM files';
 	}
-	else ($type === "pValGraphs_pdf") 
+	else ($type == "pValGraphs_pdf") 
 	{
 		$sql = 'SELECT pValPDFfilename FROM files';
 	}*/
