@@ -16,15 +16,15 @@
 	$sql = "";
 	if ($type == "dataFiles") 
 	{
-		$sql = 'SELECT dataFilename FROM files';
+		$sql = 'SELECT dataFilename AS "file" FROM files';
 	}
 	elseif ($type == "pValPosGraphs") 
 	{
-		$sql = 'SELECT pValFilename FROM files';
+		$sql = 'SELECT pValFilename AS "file" FROM files';
 	}
 	else //($type == "pValGraphs_pdf") 
 	{
-		$sql = 'SELECT pValPDFfilename FROM files';
+		$sql = 'SELECT pValPDFfilename AS "file" FROM files';
 	}
 ?>
 
