@@ -329,7 +329,7 @@ function get_list($sqli,$start)
 							<div class="row">
 								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 									<p><strong>LD Block:</strong>&nbsp; 
-									<a href="?posSearch='.$row['ld.chr'] .':'. $row['ld.start'] .'-'.$row['ld.stop'].'&limit=10&page=1">'.$row['ld.chr'] .':'. $row['ld.start'] .'-'.$row['ld.stop'].'</a></p>
+									<a href="posSearch.php?posSearch='.$row['ld.chr'] .':'. $row['ld.start'] .'-'.$row['ld.stop'].'&limit=10&page=1">'.$row['ld.chr'] .':'. $row['ld.start'] .'-'.$row['ld.stop'].'</a></p>
 								</div>
 								<div class="row">
 									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
@@ -343,7 +343,7 @@ function get_list($sqli,$start)
 										</p>
 									</div>
 									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-										<p><strong>GWAS Diseasse/Phenotype:</strong>
+										<p><strong>GWAS Disease/Phenotype:</strong>
 										<ul>';
 
 										$html .= $Ahtml;
