@@ -451,6 +451,19 @@ function createLinks($links,$list_class,$limit,$total,$page,$base)
 	return $html;
 }
 
+/*## `get_downloads()` function
+### Args
+- $sql: SQL query specific to download type
+- $type: folder name - for use in URL
+
+### Returns
+- none directly
+- prints a string of HTML when called.
+
+### Description
+generates unordered html list of link to files for download based on a sql query.
+
+*/
 function get_downloads($sql,$type)
 {
 	$databaseServer = "srv01779.soton.ac.uk:3306";
