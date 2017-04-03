@@ -450,4 +450,31 @@ function createLinks($links,$list_class,$limit,$total,$page,$base)
 	return $html;
 }
 
+function get_downloads($sql,$type)
+{
+	$databaseServer = "srv01779.soton.ac.uk:3306";
+	$databaseName = "epigenome";
+	$databaseUserName = "epigenome_ro";
+	$databasePassword = "3dfa315f63c477d4f2f68bac84eaa7e7f135da26";
+
+	$conn = mysqli_connect($databaseServer, $databaseUserName, $databasePassword, $databaseName);
+	if(!$conn)
+	{
+		//$html = "<div class='alert alert-danger'><strong>ERROR!</strong> MYSQL connection failed: " . mysqli_connect_error()."</div>";
+		die("<div class='alert alert-danger'><strong>ERROR!</strong> get_downloads() MYSQL connection failed: " . mysqli_connect_error()."</div>");
+	}
+
+	$Rhtml = "<ul>\n";
+	$res = $conn->query($sql);
+	while ($row = $res->fetch_assoc()) 
+	{
+		$Rhtml .= '	<li><a href="data/'. $type .'/' . $row["file"].'</a></li>'."\n";
+		$annCount++;
+	};
+	$Rhtml .= "</ul>\n";
+	return $Rhtml;
+}
+
+
+
 ?>
