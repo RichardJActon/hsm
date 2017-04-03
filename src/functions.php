@@ -469,7 +469,7 @@ function get_downloads($sql,$type)
 	$res = $conn->query($sql);
 	while ($row = $res->fetch_assoc()) 
 	{
-		$Rhtml .= '	<li><a href="data/'. $type .'/' . $row["file"].'</a>'. $row["file"].'</li>'."\n";
+		$Rhtml .= '	<li><a href="./data/'. $type .'/' . $row["file"].'"</a>'. $row["file"].'</li>'."\n";
 	};
 	$Rhtml .= "</ul>\n";
 	echo $Rhtml;
