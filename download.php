@@ -18,14 +18,14 @@
 	{
 		$sql = 'SELECT dataFilename FROM files';
 	}
-	else if ($type == "pValPosGraphs") 
+/*	else if ($type == "pValPosGraphs") 
 	{
 		$sql = 'SELECT pValFilename FROM files';
 	}
 	else ($type == "pValGraphs_pdf") 
 	{
 		$sql = 'SELECT pValPDFfilename FROM files';
-	}
+	}*/
 ?>
 
 <body>
