@@ -25,10 +25,10 @@
 				The plots show the significance of the relationship between the methylation state of loci and the underlying genetic variants. Thus a high peak represents a more deterministic relationship between genotype and epigenotype, middling values a potentially more facilitative and low values as more purely epigenetic. There are however nuances to this interpretation please see [Bell et al. 2017] for more detailed discussion of these results.
 			</p>
 			<p>
-				This data is from MeDIP-seq experiments from the <a href="http://www.twinsuk.ac.uk/">TwinsUK</a> <a href="http://www.epitwin.eu/">EpiTwin</a> study. The original data is available on request from the European Genome-phenome Archive under: <a href="https://www.ebi.ac.uk/ega/datasets/EGAD00010000983">EGAD00010000983</a>.
+				This data is from MeDIP-seq experiments from the <a href="http://www.twinsuk.ac.uk/">TwinsUK</a> <a href="http://www.epitwin.eu/">EpiTwin</a> study. The original data is available on request from the European Genome-phenome Archive under: <a href="https://www.ebi.ac.uk/ega/datasets/EGAD00010000983" target="_blank">EGAD00010000983</a>.
 			</p>
 			<p>
-				Code for this website can be found at: <a href="https://github.com/RichardJActon/hsm">github.com/RichardJActon/hsm</a>.
+				Code for this website can be found at: <a href="https://github.com/RichardJActon/hsm" target="_blank">github.com/RichardJActon/hsm</a>.
 			</p>
 		</div>
 	</div>
