@@ -214,6 +214,4 @@
 
 <?php mysqli_close($conn); ?>
 
-<?php get_footer(); ?>
-
 </html>
