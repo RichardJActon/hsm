@@ -20,6 +20,7 @@
 
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<ul>
+				<li><a href="./data/Supplementary_File1_mergeFinal_hsm.bed">Replicating HSM peaks</a></li>
 				<li><a href="download.php?type=dataFiles">All Data files - by SNP</a></li>
 				<!--<li><a href="./data/dataFilesChr/">All Data files - by Chromosome</a></li>-->
 				<li><a href="download.php?type=pValPosGraphs">p-Value Graphs (.png) - by SNP</a></li>
