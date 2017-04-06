@@ -50,12 +50,6 @@
 	</div>
 </div>
 
-<?php 
-get_nav(); 
-$searchTerm = "";
-$posSearch = ""; 
-?>
-
 <div class="container-fluid" style="margin-top: 7em">
 	
 	<div class="row-fluid">
