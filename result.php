@@ -81,7 +81,10 @@
 										<p><a href="https://www.ncbi.nlm.nih.gov/projects/SNP/snp_ref.cgi?searchType=adhoc_search&type=rs&rs='.$row["SNP"].'" target="_blank">dbSNP</a></p>
 									</div>
 									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-										<p><a href="http://genome.ucsc.edu/cgi-bin/hgTracks?db=hg19&lastVirtModeType=default&lastVirtModeExtraState=&virtModeType=default&virtMode=0&nonVirtPosition=&position='.$row["ld.chr"].'%3A'.$row["ld.start"].'%2D'.$row["ld.stop"].'&hgsid=585297645_jNjxavzCdnRaC0dDqxALXLho633r" target="_blank">UCSC Genome Browser</a></p>
+										<p>
+										<a href="http://genome.ucsc.edu/cgi-bin/hgTracks?org=human&position='.$row["ld.chr"].'%3A'.$row["ld.start"].'%2D'.$row["ld.stop"].'&hgt.customText=http://epigenome.soton.ac.uk/data/Supplementary_File1_mergeFinal_hsm.bed" target="_blank">UCSC Genome Browser</a>
+										<!--<a href="http://genome.ucsc.edu/cgi-bin/hgTracks?db=hg19&lastVirtModeType=default&lastVirtModeExtraState=&virtModeType=default&virtMode=0&nonVirtPosition=&position='.$row["ld.chr"].'%3A'.$row["ld.start"].'%2D'.$row["ld.stop"].'&hgsid=585297645_jNjxavzCdnRaC0dDqxALXLho633r" target="_blank">UCSC Genome Browser</a>-->
+										</p>
 									</div>								
 								</div>
 							</div>
