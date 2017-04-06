@@ -22,6 +22,34 @@
 
 <body>
 
+<div class="container-fluid">
+	<div class="row-fluid">
+		<nav class="navbar navbar-default navbar-fixed-top"> 
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+		 				<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>                        
+					</button>
+					<a class="navbar-brand" href="./index.php">Bell Group</a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Projects
+							<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="./hsm/hsm.php">hsm</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
+</div>
+
 <?php 
 get_nav(); 
 $searchTerm = "";
@@ -29,46 +57,10 @@ $posSearch = "";
 ?>
 
 <div class="container-fluid" style="margin-top: 7em">
-
-	<div class="row-fluid"  style="text-align: center;">
-		<h1>Search</h1>
-	</div>
-
-	<div class="row-fluid" style="text-align: center;padding-top:2em">
-		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<div class="btn-group">
-				<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-					Search &nbsp;<span class="caret"></span>
-				</button>
-				<ul class="dropdown-menu" role="menu">
-					<li><a id="SNP-btn">SNP</a></li>
-					<li><a id="gene-btn">Gene</a></li>
-					<li><a id="GWAS-btn">GWAS Disease/Phenotype</a></li>
-					<li><a id="coord-btn">Genomic Coordinates</a></li>
-				</ul>&nbsp;
-			</div>
-		</div>
-	</div>
-
-	<div class="row-fluid" style="text-align:center; padding-top:4em">
-		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<div class="row-fluid" id="searchDiv">
-				<form id="searchForm" class="form-horizontal content" method="get" action="result.php?searchTerm">
-					<div class="form-group">
-						<div>
-							<label id="searchLabel" class="sr-only" for="searchInput"></label>
-							<input id="searchInput" type="text" class="form-control typeahead" name="searchTerm" placeholder="e.g. rs6025"></input>
-							<div class="hidden-submit"><input type="submit" tabindex="-1"/></div>
-						</div>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-
+	
 	<div class="row-fluid">
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align: center;">
-			<p>Search based on SNP (rs IDs), Gene names, GWAS disease/phenotype or genomic coordinates.</p>
+			<p></p>
 		</div>
 	</div>
 	

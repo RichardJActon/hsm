@@ -1,2 +1,0 @@
-rs10127775	chr1	230305000	230305500	chr1_rs10127775_boxplot_230305500_1DISC.svg	chr1_rs10127775_hsm_results_1DISC.txt.gz	chr1_rs10127775_methyl_1DISC_gg2.svg
-rs6025	chr1	169275750	169276250	chr1_rs6025_boxplot_169276250_1DISC.svg	chr1_rs6025_hsm_results_1DISC.txt.gz	chr1_rs6025_methyl_1DISC_gg2.svg
