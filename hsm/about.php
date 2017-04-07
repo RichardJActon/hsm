@@ -19,10 +19,11 @@
 	<div class="row-fluid">
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<p>
-				This website makes available the results of an analysis of the relationship between allelic dosage of genetic risk loci that have previously been significantly and reliably associated with human phenotypic variation (via NIH GWAS Catalogue) and DNA methylation of the genomic region harbouring it.
-			</p>
+				This website makes available the results from Bell C.G. et al., (2017) “Obligatory And Facilitative Allelic Variation In The DNA Methylome Within Common Disease-Associated Loci.”
 			<p>
-				The plots show the significance of the relationship between the methylation state of loci and the underlying genetic variants. Thus a high peak represents a more deterministic relationship between genotype and epigenotype, middling values a potentially more facilitative and low values as more purely epigenetic. There are however nuances to this interpretation please see [Bell et al. 2017] for more detailed discussion of these results.
+				This analysis was performed in 3,128 MeDIP-seq DNA methylomes derived from peripheral blood. The results present the allelic dosage association of EBI-NIH Catalogue GWAS SNPs with DNA methylation. This was assessed in 500 bp semi-overlapping windows across the respective GWAS SNP Linkage Disequilibrium Blocks. It therefore identifies significant regional DNA methylation variation between risk and non-risk GWAS SNP haplotypes for these robustly associated human diseases and phenotypes. Genetic variation (CNVs, Indels, STRs, etc.) potentially contributing to these signals due to obligatory, facilitative, or dosage effects are subsequently overlaid with these results.
+			</p>
+				Please see the publication for more detailed discussion of these data and results.
 			</p>
 			<p>
 				This data is from MeDIP-seq experiments from the <a href="http://www.twinsuk.ac.uk/" target="_blank">TwinsUK</a> <a href="http://www.epitwin.eu/" target="_blank">EpiTwin</a> study. 
