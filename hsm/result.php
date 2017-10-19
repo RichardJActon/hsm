@@ -118,6 +118,7 @@
 													<li><a href="./data/pValPosGraphs/'.$row["pValFilename"].'" download>Graph (.png)</a></li>
 													<li><a href="./data/pValGraphs_pdf/'.$row["pValPDFfilename"].'" download>Graph (.pdf)</a></li>
 													<li><a href="./img/hsm_legend.png" download>Legend</a></li>
+													<li><a href="./img/hsm_legend_extended.png">Extended Legend</a></li>
 												</ul>
 											</div>
 										</div>
@@ -145,7 +146,9 @@
 							</div>
 							<div id="key" class="panel-collapse collapse in">
 								<div class="panel-body">
-									<img src="./img/hsm_legend.png" style="width:60%" alt="key">
+									<a href="./img/hsm_legend_extended.png">
+										<img src="./img/hsm_legend.png" style="width:60%" alt="key">
+									</a>
 								</div>
 							</div>
 						</div>
