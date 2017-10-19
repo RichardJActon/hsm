@@ -30,6 +30,7 @@
 				<!--The original data is available on request from the European Genome-phenome Archive under: <a href="https://www.ebi.ac.uk/ega/datasets/EGAD00010000983" target="_blank">EGAD00010000983</a>.-->
 			</p>
 			<p>
+				Code for the Data analysis and plotting can be found at: <a href="https://github.com/epigenomed/hsm_analysis" target="_blank">github.com/epigenomed/hsm_analysis</a>.
 				Code for this website can be found at: <a href="https://github.com/RichardJActon/hsm" target="_blank">github.com/RichardJActon/hsm</a>.
 			</p>
 		</div>
