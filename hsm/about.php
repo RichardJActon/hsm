@@ -20,9 +20,12 @@
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<p>
 				This website makes available the results from Bell C.G. et al., (2017) “Obligatory And Facilitative Allelic Variation In The DNA Methylome Within Common Disease-Associated Loci.”
+			</p>
 			<p>
 				This analysis was performed in 3,128 MeDIP-seq DNA methylomes derived from peripheral blood. The results present the allelic dosage association of EBI-NIH Catalogue GWAS SNPs with DNA methylation. This was assessed in 500 bp semi-overlapping windows across the respective GWAS SNP Linkage Disequilibrium Blocks. It therefore identifies significant regional DNA methylation variation between risk and non-risk GWAS SNP haplotypes for these robustly associated human diseases and phenotypes. Genetic variation (CNVs, Indels, STRs, etc.) potentially contributing to these signals due to obligatory, facilitative, or dosage effects are subsequently overlaid with these results.
 			</p>
+			<img src="./img/Bell2017Fig1_StudyDesign.png" alt="Figure 1 Study Design" height="600em"></img>
+			<p>
 				Please see the publication for more detailed discussion of these data and results.
 			</p>
 			<p>
@@ -30,7 +33,9 @@
 				<!--The original data is available on request from the European Genome-phenome Archive under: <a href="https://www.ebi.ac.uk/ega/datasets/EGAD00010000983" target="_blank">EGAD00010000983</a>.-->
 			</p>
 			<p>
-				Code for the Data analysis and plotting can be found at: <a href="https://github.com/epigenomed/hsm_analysis" target="_blank">github.com/epigenomed/hsm_analysis</a>.
+				Code for the Data analysis and plotting can be found at: <a href="https://github.com/epigenomed/hsm_analysis" target="_blank">github.com/epigenomed/hsm_analysis</a>. 
+			</p>
+			<p>
 				Code for this website can be found at: <a href="https://github.com/RichardJActon/hsm" target="_blank">github.com/RichardJActon/hsm</a>.
 			</p>
 		</div>
