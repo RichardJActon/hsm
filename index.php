@@ -39,15 +39,15 @@
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav navbar-right">
 						<li class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" role="button" href="#" data-target="#myDropdown">Projects
-							<span class="caret"></span>
+							<a class="dropdown-toggle" data-toggle="dropdown" role="button" href="#">Projects
+								<span class="caret"></span>
 							</a>
+							<ul class="dropdown-menu" role="menu">
+								<li>
+									<a href="./hsm/hsm.php">hsm</a>
+								</li>
+							</ul>
 						</li>
-						<ul class="dropdown-menu" role="menu" id="#myDropdown">
-							<li>
-								<a href="./hsm/hsm.php">hsm</a>
-							</li>
-						</ul>
 					</ul>
 				</div>
 
