@@ -10,7 +10,7 @@
 <?php 
 	if ($_GET["type"] != ("dataFiles"||"pValPosGraphs"||"pValGraphs_pdf") )
 	{
-		die("<div class='alert alert-danger'><strong>ERROR!</strong> invalid download class - dataFiles, pValPosGraphs or pValGraphs_pdf ar valid download classes.</div>");
+		die("<div class='alert alert-danger'><strong>ERROR!</strong> invalid download class - dataFiles, pValPosGraphs or pValGraphs_pdf are valid download classes.</div>");
 	}
 	$type = $_GET["type"];
 	$sql = "";
