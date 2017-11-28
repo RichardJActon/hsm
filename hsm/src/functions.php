@@ -503,16 +503,14 @@ Validates the download types given to the download.php page
 */
 function valid_download_type($type)
 {
-	if ($type == ("1DISC_dataFile"||"1DISC_graph_png"||"1DISC_graph_pdf"||"2FOLL_dataFile"||"2FOLL_graph_png"||"2FOLL_graph_pdf"||"3REPL_dataFile"||"3REPL_graph_png"||"3REPL_graph_pdf"||"vALL_dataFile"||"vALL_graph_png"||"vALL_graph_pdf"))
+	if ($type == ("1DISC_dataFile"||"1DISC_graph_png"||"1DISC_graph_pdf"||"2FOLL_dataFile"||"2FOLL_graph_png"||"2FOLL_graph_pdf"||"3REPL_dataFile"||"3REPL_graph_png"||"3REPL_graph_pdf"||"vALL_dataFile"||"vALL_graph_png"||"vALL_graph_pdf") )
 	{
 		$out['bool'] = True;
 		$out['str'] = "";
 		return $out;
-	}
-	else
-	{
+	} else {
 		$out['bool'] = False;
-		$out['str'] = "<div class='alert alert-danger'><strong>ERROR!</strong> invalid download class - 1DISC_dataFile, 1DISC_graph_png, 1DISC_graph_pdf, 2FOLL_dataFile, 2FOLL_graph_png, 2FOLL_graph_pdf, 3REPL_dataFile, 3REPL_graph_png, 3REPL_graph_pdf, vALL_dataFile, vALL_graph_png, vALL_graph_pdf are valid download classes.</div>");
+		$out['str'] = "<div class='alert alert-danger'><strong>ERROR!</strong> invalid download class - 1DISC_dataFile, 1DISC_graph_png, 1DISC_graph_pdf, 2FOLL_dataFile, 2FOLL_graph_png, 2FOLL_graph_pdf, 3REPL_dataFile, 3REPL_graph_png, 3REPL_graph_pdf, vALL_dataFile, vALL_graph_png, vALL_graph_pdf are valid download classes.</div>";
 		return $out;
 	}
 }

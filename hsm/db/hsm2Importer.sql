@@ -1,3 +1,5 @@
+USE epigenome;
+
 LOAD DATA LOCAL INFILE 'DatabaseTablesData/LD_Block.txt' INTO TABLE LD_Block
 FIELDS TERMINATED BY '\t'
 LINES TERMINATED BY '\n'
@@ -20,7 +22,7 @@ LOAD DATA LOCAL INFILE 'DatabaseTablesData/files.txt' INTO TABLE files
 FIELDS TERMINATED BY '\t'
 LINES TERMINATED BY '\n'
 /*IGNORE 1 LINES*/
-(SNP,pValFilename,dataFilename,pValPDFfilename);
+(SNP,1DISC_dataFile, 1DISC_graph_png, 1DISC_graph_pdf, 2FOLL_dataFile, 2FOLL_graph_png, 2FOLL_graph_pdf, 3REPL_dataFile, 3REPL_graph_png, 3REPL_graph_pdf, vALL_dataFile, vALL_graph_png, vALL_graph_pdf);
 
 LOAD DATA LOCAL INFILE 'DatabaseTablesData/annotationIDpairs.txt' INTO TABLE annotationIDpairs
 FIELDS TERMINATED BY '\t'
