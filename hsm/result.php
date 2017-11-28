@@ -25,6 +25,13 @@
 	{
 		die("<div class='alert alert-danger'><strong>ERROR!</strong> Search missing or invalid.</div>");
 	}
+
+	$dataset; /*VALIDATE*/
+	if (defined($_GET['dataset'])) 
+	{
+		$dataset = $_GET['dataset'];
+	}
+	$dataDir = $dataset.'_graphs_png';
 ?>
 
 <?php $searchTerm = ""; ?>
@@ -43,7 +50,7 @@
 	}
 	
 	/*query to retrieve filenames, LD block info and position info for a SNP*/
-	$sql = 'SELECT epigenome.files.dataFilename, epigenome.files.pValFilename, epigenome.files.pValPDFfilename, epigenome.SNP.SNP,epigenome.SNP.chr AS "SNP.chr",epigenome.SNP.start AS "SNP.start",epigenome.SNP.stop AS "SNP.stop",epigenome.LD_Block.chr AS "ld.chr",epigenome.LD_Block.start AS "ld.start",epigenome.LD_Block.stop AS "ld.stop" FROM epigenome.SNP,epigenome.RefSNPpairs,epigenome.LD_Block,files WHERE RefSNPpairs.SNP = "'. $pos[0] . '" AND RefSNPpairs.Ref_SNP=LD_Block.Ref_SNP AND RefSNPpairs.SNP = SNP.SNP AND files.SNP=SNP.SNP;';
+	$sql = 'SELECT epigenome.files.1DISC_dataFile, epigenome.files.1DISC_graph_png, epigenome.files.1DISC_graph_pdf, epigenome.files.2FOLL_dataFile, epigenome.files.2FOLL_graph_png, epigenome.files.2FOLL_graph_pdf, epigenome.files.3REPL_dataFile, epigenome.files.3REPL_graph_png, epigenome.files.3REPL_graph_pdf, epigenome.files.vALL_dataFile, epigenome.files.vALL_graph_png, epigenome.files.vALL_graph_pdf, epigenome.SNP.SNP,epigenome.SNP.chr AS "SNP.chr",epigenome.SNP.start AS "SNP.start",epigenome.SNP.stop AS "SNP.stop",epigenome.LD_Block.chr AS "ld.chr",epigenome.LD_Block.start AS "ld.start",epigenome.LD_Block.stop AS "ld.stop" FROM epigenome.SNP,epigenome.RefSNPpairs,epigenome.LD_Block,files WHERE RefSNPpairs.SNP = "'. $pos[0] . '" AND RefSNPpairs.Ref_SNP=LD_Block.Ref_SNP AND RefSNPpairs.SNP = SNP.SNP AND files.SNP=SNP.SNP;';
 
 	$result = $conn->query($sql);
 	
@@ -58,7 +65,7 @@
 		<div class="row-fluid">
 			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 				<div class="page-header">
-					<h1><a href="./result.php?searchTerm='. $row["SNP"].'">'.$row["SNP"]. '</a></h1>
+					<h1><a href="./result.php?searchTerm=' .$row["SNP"]. '&dataset=' .$dataset. '">'.$row["SNP"]. '</a></h1>
 					<p><strong>SNP at: ' . $row["SNP.chr"].':'.$row["SNP.start"].'-'.$row["SNP.stop"].'</strong></p>
 					<p><strong>LD Block: </strong><a href="./posSearch.php?posSearch='.$row['ld.chr'] .':'. $row['ld.start'] .'-'.$row['ld.stop'].'&limit=10&page=1">'.$row['ld.chr'] .':'. $row['ld.start'] .'-'.$row['ld.stop'].'</a></p>
 				</div>
@@ -97,31 +104,54 @@
 					<div class="panel panel-default">
 						<div class="panel-heading">
 							<h2 class="panel-title">
-								<a data-toggle="collapse" href="#download">Downloads</a>
+								<a data-toggle="collapse" href="#download">Datasets</a>
 							</h2>	
 						</div>
 						<div id="download" class="panel-collapse collapse in">
 							<div class="panel-body">
 								<div class="container-fluid">
 									<div class="row-fluid">
-										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+										<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
 											<p>Get data as .txt.gz or image as .png or .pdf</p>
 										</div>
-										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+										<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
 											<div class="btn-group">
 												<!--<button type="button" class="btn btn-primary">Download <span class="glyphicon glyphicon-download"></span></button>-->
 												<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
 													Download <span class="glyphicon glyphicon-download"></span>&nbsp;<span class="caret"></span>
 												</button>
 												<ul class="dropdown-menu" role="menu">
-													<li><a href="./data/dataFiles/'.$row["dataFilename"].'" download>Data</a></li>
-													<li><a href="./data/pValPosGraphs/'.$row["pValFilename"].'" download>Graph (.png)</a></li>
-													<li><a href="./data/pValGraphs_pdf/'.$row["pValPDFfilename"].'" download>Graph (.pdf)</a></li>
+													<li><a href="./data/1DISC_results_txt/'.$row["1DISC_dataFile"].'" download>1DISC Data</a></li>
+													<li><a href="./data/1DISC_graphs_png/'.$row["1DISC_graph_png"].'" download>1DISC Graph (.png)</a></li>
+													<li><a href="./data/1DISC_graphs/'.$row["1DISC_graph_pdf"].'" download> 1DISC Graph (.pdf)</a></li>
+													<li><a href="./data/2FOLL_results_txt/'.$row["2FOLL_dataFile"].'" download>2FOLL Data</a></li>
+													<li><a href="./data/2FOLL_graphs_png/'.$row["2FOLL_graph_png"].'" download>2FOLL Graph (.png)</a></li>
+													<li><a href="./data/2FOLL_graphs/'.$row["2FOLL_graph_pdf"].'" download>2FOLL Graph (.pdf)</a></li>
+													<li><a href="./data/3REPL_results_txt/'.$row["3REPL_dataFile"].'" download>3REPL Data</a></li>
+													<li><a href="./data/3REPL_graphs_png/'.$row["3REPL_graph_png"].'" download>3REPL Graph (.png)</a></li>
+													<li><a href="./data/3REPL_graphs/'.$row["3REPL_graph_pdf"].'" download>3REPL Graph (.pdf)</a></li>
+													<li><a href="./data/vALL_results_txt/'.$row["vALL_dataFile"].'" download>vALL Data</a></li>
+													<li><a href="./data/vALL_graphs_png/'.$row["vALL_graph_png"].'" download>vALL Graph (.png)</a></li>
+													<li><a href="./data/vALL_graphs/'.$row["vALL_graph_pdf"].'" download>vALL Graph (.pdf)</a></li>
 													<li><a href="./img/hsm_legend.png" download>Legend</a></li>
 													<li><a href="./img/hsm_legend_extended.png">Extended Legend</a></li>
 												</ul>
 											</div>
 										</div>
+										<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+											<div class="btn-group">
+												<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+													View <span class="caret"></span>
+												</button>
+												<ul class="dropdown-menu" role="menu">
+													<li><a href="./result.php?searchTerm=' .$row["SNP"]. '&dataset=1DISC">1DISC Data</a></li>
+													<li><a href="./result.php?searchTerm=' .$row["SNP"]. '&dataset=2FOLL">2FOLL Data</a></li>
+													<li><a href="./result.php?searchTerm=' .$row["SNP"]. '&dataset=3REPL">3REPL Data</a></li>
+													<li><a href="./result.php?searchTerm=' .$row["SNP"]. '&dataset=vALL">vALL Data</a></li>
+												</ul>
+											</div>
+										</div>
+
 									</div>
 								</div>
 							</div>
@@ -208,7 +238,7 @@
 						</div>
 						<div id="manhattan" class="panel-collapse collapse in">
 							<div class="panel-body">
-								<img src="./data/pValPosGraphs/'.$row["pValFilename"].'" style="width:100%" alt="manhattan">
+								<img src="./data/'.$datDir.'/'.$row["$dataDir"].'" style="width:100%" alt="manhattan">
 							</div>
 						</div>
 					</div>

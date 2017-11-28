@@ -488,6 +488,53 @@ function get_downloads($sql,$type)
 	echo $Rhtml;
 }
 
+/*## `valid_download_type()` function
+### Args
+- $type: folder name - for use in URL
 
+### Returns
+- $out array
+	- 'bool' - Boolean - True = valid type, False = invalid type
+	- 'str' - error string to print if false, empty string if true
+
+### Description
+Validates the download types given to the download.php page
+
+*/
+function valid_download_type($type)
+{
+	if ($type == ("1DISC_dataFile"||"1DISC_graph_png"||"1DISC_graph_pdf"||"2FOLL_dataFile"||"2FOLL_graph_png"||"2FOLL_graph_pdf"||"3REPL_dataFile"||"3REPL_graph_png"||"3REPL_graph_pdf"||"vALL_dataFile"||"vALL_graph_png"||"vALL_graph_pdf"))
+	{
+		$out['bool'] = True;
+		$out['str'] = "";
+		return $out;
+	}
+	else
+	{
+		$out['bool'] = False;
+		$out['str'] = "<div class='alert alert-danger'><strong>ERROR!</strong> invalid download class - 1DISC_dataFile, 1DISC_graph_png, 1DISC_graph_pdf, 2FOLL_dataFile, 2FOLL_graph_png, 2FOLL_graph_pdf, 3REPL_dataFile, 3REPL_graph_png, 3REPL_graph_pdf, vALL_dataFile, vALL_graph_png, vALL_graph_pdf are valid download classes.</div>");
+		return $out;
+	}
+}
+
+/*## `get_download_file` function
+### Args
+- $type: folder name / data type - for use in SQL query
+
+### Returns
+- $out array
+	- 'sql' - sql query to get all the relevant files
+	- 'title' - title to give the page
+
+### Description
+gets the SQL query needed to retrieve the download page contents and the page title from the data type
+
+*/
+function get_download_file($type)
+{
+	$out['sql'] = "SELECT $type AS 'file' FROM files";
+	$out['title'] = "Download $type";
+	return $out;
+}
 
 ?>

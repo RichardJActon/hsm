@@ -8,28 +8,17 @@
 <?php get_nav_search(); ?>
 
 <?php 
-	if ($_GET["type"] != ("dataFiles"||"pValPosGraphs"||"pValGraphs_pdf") )
+	$typecheck = valid_download_type($_GET["type"]);
+	if (!$typecheck['bool'])
 	{
-		die("<div class='alert alert-danger'><strong>ERROR!</strong> invalid download class - dataFiles, pValPosGraphs or pValGraphs_pdf ar valid download classes.</div>");
+		die($typecheck['str']);
 	}
+
 	$type = $_GET["type"];
-	$sql = "";
-	$title = "";
-	if ($type == "dataFiles") 
-	{
-		$sql = 'SELECT dataFilename AS "file" FROM files';
-		$title = "Download Datafiles - txt.gz";
-	}
-	elseif ($type == "pValPosGraphs") 
-	{
-		$sql = 'SELECT pValFilename AS "file" FROM files';
-		$title = "Download PNGs";
-	}
-	else //($type == "pValGraphs_pdf") 
-	{
-		$sql = 'SELECT pValPDFfilename AS "file" FROM files';
-		$title = "Download PDFs";
-	}
+	$dwn = get_download_file($_GET["type"]);
+	$sql = $dwn['sql'];
+	$title = $dwn['title'];
+
 ?>
 
 <body>

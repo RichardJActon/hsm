@@ -104,7 +104,12 @@ $(document).ready(function()
 
 	NB - styling requires the hsm.css stylesheet
 	*/
-	var searchDiv = '<form id="searchForm" class="form-horizontal content" method="get" action="%action%"><div class="form-group"><div><label id="searchLabel" class="sr-only" for="searchInput">%label%</label><input id="searchInput" type="text" class="form-control typeahead" name="%name%" placeholder="%placeholder%"></input><div class="hidden-submit"><input type="submit" tabindex="-1"/></div></div></div></form>'
+	var searchDiv = '<form id="searchForm" class="form-horizontal content" method="get" action="%action%">\
+	<div class="form-group">\
+	<div><label id="searchLabel" class="sr-only" for="searchInput">%label%</label>\
+	<input id="searchInput" type="text" class="form-control typeahead" name="%name%" placeholder="%placeholder%">\
+	</input><div class="hidden-submit"><input type="submit" tabindex="-1"/>\
+	</div></div></div></form>';
 
 	/*## `searchSet()` function
 	### Args
