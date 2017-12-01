@@ -228,7 +228,7 @@
 					<div class="panel panel-default">
 						<div class="panel-heading">
 							<h2 class="panel-title">
-								<a data-toggle="collapse" href="#manhattan">p-value by Position</a>
+								<a data-toggle="collapse" href="#manhattan">p-value by Position</a> <span class="badge">'.$dataset.'</span>
 							</h2>	
 						</div>
 						<div id="manhattan" class="panel-collapse collapse in">
