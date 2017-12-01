@@ -45,7 +45,7 @@
 	}
 	
 	/*query to retrieve filenames, LD block info and position info for a SNP*/
-	$sql = 'SELECT epigenome.files.1DISC_dataFile, epigenome.files.1DISC_graph_png, epigenome.files.1DISC_graph_pdf, epigenome.files.2FOLL_dataFile, epigenome.files.2FOLL_graph_png, epigenome.files.2FOLL_graph_pdf, epigenome.files.3REPL_dataFile, epigenome.files.3REPL_graph_png, epigenome.files.3REPL_graph_pdf, epigenome.files.vALL_dataFile, epigenome.files.vALL_graph_png, epigenome.files.vALL_graph_pdf, epigenome.SNP.SNP,epigenome.SNP.chr AS "SNP.chr",epigenome.SNP.start AS "SNP.start",epigenome.SNP.stop AS "SNP.stop",epigenome.LD_Block.chr AS "ld.chr",epigenome.LD_Block.start AS "ld.start",epigenome.LD_Block.stop AS "ld.stop" FROM epigenome.SNP,epigenome.RefSNPpairs,epigenome.LD_Block,files WHERE RefSNPpairs.SNP = "'. $pos[0] . '" AND RefSNPpairs.Ref_SNP=LD_Block.Ref_SNP AND RefSNPpairs.SNP = SNP.SNP AND files.SNP=SNP.SNP;';
+	$sql = 'SELECT epigenome.files.1DISC_result_txt, epigenome.files.1DISC_graph_png, epigenome.files.1DISC_graph, epigenome.files.2FOLL_result_txt, epigenome.files.2FOLL_graph_png, epigenome.files.2FOLL_graph, epigenome.files.3REPL_result_txt, epigenome.files.3REPL_graph_png, epigenome.files.3REPL_graph, epigenome.files.vALL_result_txt, epigenome.files.vALL_graph_png, epigenome.files.vALL_graph, epigenome.SNP.SNP,epigenome.SNP.chr AS "SNP.chr",epigenome.SNP.start AS "SNP.start",epigenome.SNP.stop AS "SNP.stop",epigenome.LD_Block.chr AS "ld.chr",epigenome.LD_Block.start AS "ld.start",epigenome.LD_Block.stop AS "ld.stop" FROM epigenome.SNP,epigenome.RefSNPpairs,epigenome.LD_Block,files WHERE RefSNPpairs.SNP = "'. $pos[0] . '" AND RefSNPpairs.Ref_SNP=LD_Block.Ref_SNP AND RefSNPpairs.SNP = SNP.SNP AND files.SNP=SNP.SNP;';
 
 	$result = $conn->query($sql);
 	
@@ -116,18 +116,18 @@
 													Download <span class="glyphicon glyphicon-download"></span>&nbsp;<span class="caret"></span>
 												</button>
 												<ul class="dropdown-menu" role="menu">
-													<li><a href="./data/1DISC_result_txt/'.$row["SNP.chr"].'/'.$row["1DISC_dataFile"].'" download>1DISC Data</a></li>
+													<li><a href="./data/1DISC_result_txt/'.$row["SNP.chr"].'/'.$row["1DISC_result_txt"].'" download>1DISC Data</a></li>
 													<li><a href="./data/1DISC_graph_png/'.$row["SNP.chr"].'/'.$row["1DISC_graph_png"].'" download>1DISC Graph (.png)</a></li>
-													<li><a href="./data/1DISC_graph/'.$row["SNP.chr"].'/'.$row["1DISC_graph_pdf"].'" download> 1DISC Graph (.pdf)</a></li>
-													<li><a href="./data/2FOLL_result_txt/'.$row["SNP.chr"].'/'.$row["2FOLL_dataFile"].'" download>2FOLL Data</a></li>
+													<li><a href="./data/1DISC_graph/'.$row["SNP.chr"].'/'.$row["1DISC_graph"].'" download> 1DISC Graph (.pdf)</a></li>
+													<li><a href="./data/2FOLL_result_txt/'.$row["SNP.chr"].'/'.$row["2FOLL_result_txt"].'" download>2FOLL Data</a></li>
 													<li><a href="./data/2FOLL_graph_png/'.$row["SNP.chr"].'/'.$row["2FOLL_graph_png"].'" download>2FOLL Graph (.png)</a></li>
-													<li><a href="./data/2FOLL_graph/'.$row["SNP.chr"].'/'.$row["2FOLL_graph_pdf"].'" download>2FOLL Graph (.pdf)</a></li>
-													<li><a href="./data/3REPL_result_txt/'.$row["SNP.chr"].'/'.$row["3REPL_dataFile"].'" download>3REPL Data</a></li>
+													<li><a href="./data/2FOLL_graph/'.$row["SNP.chr"].'/'.$row["2FOLL_graph"].'" download>2FOLL Graph (.pdf)</a></li>
+													<li><a href="./data/3REPL_result_txt/'.$row["SNP.chr"].'/'.$row["3REPL_result_txt"].'" download>3REPL Data</a></li>
 													<li><a href="./data/3REPL_graph_png/'.$row["SNP.chr"].'/'.$row["3REPL_graph_png"].'" download>3REPL Graph (.png)</a></li>
-													<li><a href="./data/3REPL_graph/'.$row["3REPL_graph_pdf"].'" download>3REPL Graph (.pdf)</a></li>
-													<li><a href="./data/vALL_result_txt/'.$row["SNP.chr"].'/'.$row["vALL_dataFile"].'" download>vALL Data</a></li>
+													<li><a href="./data/3REPL_graph/'.$row["3REPL_graph"].'" download>3REPL Graph (.pdf)</a></li>
+													<li><a href="./data/vALL_result_txt/'.$row["SNP.chr"].'/'.$row["vALL_result_txt"].'" download>vALL Data</a></li>
 													<li><a href="./data/vALL_graph_png/'.$row["SNP.chr"].'/'.$row["vALL_graph_png"].'" download>vALL Graph (.png)</a></li>
-													<li><a href="./data/vALL_graph/'.$row["SNP.chr"].'/'.$row["vALL_graph_pdf"].'" download>vALL Graph (.pdf)</a></li>
+													<li><a href="./data/vALL_graph/'.$row["SNP.chr"].'/'.$row["vALL_graph"].'" download>vALL Graph (.pdf)</a></li>
 													<li><a href="./img/hsm_legend.png" download>Legend</a></li>
 													<li><a href="./img/hsm_legend_extended.png">Extended Legend</a></li>
 												</ul>
