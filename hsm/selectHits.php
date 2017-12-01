@@ -25,7 +25,7 @@
 
 <?php
 	/*get total number of results*/
-	$conn = mysqli_connect($databaseServer,$databaseName,$databaseUserName,$databasePassword);
+	$conn = mysqli_connect($databaseServer,$databaseUserName,$databasePassword,$databaseName);
 	if(!$conn)
 	{
 		die("<div class='alert alert-danger'><strong>ERROR!</strong> MYSQL connection failed: " . mysqli_connect_error()."</div>");

@@ -60,7 +60,7 @@
 	//$new_query_string = http_build_query($params);
 
 	/*get total number of results*/
-	$conn = mysqli_connect($databaseServer,$databaseName,$databaseUserName,$databasePassword);
+	$conn = mysqli_connect($databaseServer,$databaseUserName,$databasePassword,$databaseName);
 	if(!$conn)
 	{
 		

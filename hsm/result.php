@@ -27,11 +27,11 @@
 	}
 
 	$dataset = "1DISC"; /*VALIDATE*/
-	if (defined($_GET['dataset'])) 
+	if (isset($_GET['dataset'])) 
 	{
 		$dataset = $_GET['dataset'];
 	} 
-	$dataDir = $dataset.'_graphs_png';
+	$dataDir = $dataset.'_graph_png';
 ?>
 
 <?php $searchTerm = ""; ?>
@@ -233,7 +233,7 @@
 						</div>
 						<div id="manhattan" class="panel-collapse collapse in">
 							<div class="panel-body">
-								<img src="./data/'.$dataDir.'/'.$row["SNP.chr"].'/'. $row['$dataDir'] .'" style="width:100%" alt="manhattan">
+								<img src="./data/'.$dataDir.'/'.$row["SNP.chr"].'/'. $row[$dataDir] .'" style="width:100%" alt="manhattan">
 							</div>
 						</div>
 					</div>
