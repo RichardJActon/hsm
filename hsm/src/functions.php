@@ -468,7 +468,7 @@ function get_downloads($sql,$type,$databaseServer,$databaseName,$databaseUserNam
 	$res = $conn->query($sql);
 	while ($row = $res->fetch_assoc()) 
 	{
-		$Rhtml .= '	<li><a href="http://www.epigenome.soton.ac.uk/hsm/data/'. $type .'/'. $row["chr"] .'/'. $row["file"].'"</a>'. $row["file"].'</li>'."\n";
+		$Rhtml .= '	<li><a href="./data/'. $type .'/'. $row["chr"] .'/'. $row["file"].'"</a>'. $row["file"].'</li>'."\n";
 	};
 	$Rhtml .= "</ul>\n";
 	echo $Rhtml;
