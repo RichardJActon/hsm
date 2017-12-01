@@ -30,6 +30,8 @@
 	if (defined($_GET['dataset'])) 
 	{
 		$dataset = $_GET['dataset'];
+	} else {
+		$dataset = "1DISC";
 	}
 	$dataDir = $dataset.'_graphs_png';
 ?>
