@@ -98,12 +98,9 @@
 				<div class="panel-group">
 					<div class="panel panel-default">
 						<div class="panel-heading">
-							<span>
 								<h2 class="panel-title">
-									<a data-toggle="collapse" href="#download">Datasets</a>
+									<a data-toggle="collapse" href="#download">Datasets</a> <span class="badge">'.$dataset.'</span>
 								</h2>
-							</span>
-							<span class="badge">'.$dataset.'</span>
 						</div>
 						<div id="download" class="panel-collapse collapse in">
 							<div class="panel-body">
