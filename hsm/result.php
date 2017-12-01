@@ -116,18 +116,18 @@
 													Download <span class="glyphicon glyphicon-download"></span>&nbsp;<span class="caret"></span>
 												</button>
 												<ul class="dropdown-menu" role="menu">
-													<li><a href="./data/1DISC_results_txt/'.$row["SNP.chr"].'/'.$row["1DISC_dataFile"].'" download>1DISC Data</a></li>
-													<li><a href="./data/1DISC_graphs_png/'.$row["SNP.chr"].'/'.$row["1DISC_graph_png"].'" download>1DISC Graph (.png)</a></li>
-													<li><a href="./data/1DISC_graphs/'.$row["SNP.chr"].'/'.$row["1DISC_graph_pdf"].'" download> 1DISC Graph (.pdf)</a></li>
-													<li><a href="./data/2FOLL_results_txt/'.$row["SNP.chr"].'/'.$row["2FOLL_dataFile"].'" download>2FOLL Data</a></li>
-													<li><a href="./data/2FOLL_graphs_png/'.$row["SNP.chr"].'/'.$row["2FOLL_graph_png"].'" download>2FOLL Graph (.png)</a></li>
-													<li><a href="./data/2FOLL_graphs/'.$row["SNP.chr"].'/'.$row["2FOLL_graph_pdf"].'" download>2FOLL Graph (.pdf)</a></li>
-													<li><a href="./data/3REPL_results_txt/'.$row["SNP.chr"].'/'.$row["3REPL_dataFile"].'" download>3REPL Data</a></li>
-													<li><a href="./data/3REPL_graphs_png/'.$row["SNP.chr"].'/'.$row["3REPL_graph_png"].'" download>3REPL Graph (.png)</a></li>
-													<li><a href="./data/3REPL_graphs/'.$row["3REPL_graph_pdf"].'" download>3REPL Graph (.pdf)</a></li>
-													<li><a href="./data/vALL_results_txt/'.$row["SNP.chr"].'/'.$row["vALL_dataFile"].'" download>vALL Data</a></li>
-													<li><a href="./data/vALL_graphs_png/'.$row["SNP.chr"].'/'.$row["vALL_graph_png"].'" download>vALL Graph (.png)</a></li>
-													<li><a href="./data/vALL_graphs/'.$row["SNP.chr"].'/'.$row["vALL_graph_pdf"].'" download>vALL Graph (.pdf)</a></li>
+													<li><a href="./data/1DISC_result_txt/'.$row["SNP.chr"].'/'.$row["1DISC_dataFile"].'" download>1DISC Data</a></li>
+													<li><a href="./data/1DISC_graph_png/'.$row["SNP.chr"].'/'.$row["1DISC_graph_png"].'" download>1DISC Graph (.png)</a></li>
+													<li><a href="./data/1DISC_graph/'.$row["SNP.chr"].'/'.$row["1DISC_graph_pdf"].'" download> 1DISC Graph (.pdf)</a></li>
+													<li><a href="./data/2FOLL_result_txt/'.$row["SNP.chr"].'/'.$row["2FOLL_dataFile"].'" download>2FOLL Data</a></li>
+													<li><a href="./data/2FOLL_graph_png/'.$row["SNP.chr"].'/'.$row["2FOLL_graph_png"].'" download>2FOLL Graph (.png)</a></li>
+													<li><a href="./data/2FOLL_graph/'.$row["SNP.chr"].'/'.$row["2FOLL_graph_pdf"].'" download>2FOLL Graph (.pdf)</a></li>
+													<li><a href="./data/3REPL_result_txt/'.$row["SNP.chr"].'/'.$row["3REPL_dataFile"].'" download>3REPL Data</a></li>
+													<li><a href="./data/3REPL_graph_png/'.$row["SNP.chr"].'/'.$row["3REPL_graph_png"].'" download>3REPL Graph (.png)</a></li>
+													<li><a href="./data/3REPL_graph/'.$row["3REPL_graph_pdf"].'" download>3REPL Graph (.pdf)</a></li>
+													<li><a href="./data/vALL_result_txt/'.$row["SNP.chr"].'/'.$row["vALL_dataFile"].'" download>vALL Data</a></li>
+													<li><a href="./data/vALL_graph_png/'.$row["SNP.chr"].'/'.$row["vALL_graph_png"].'" download>vALL Graph (.png)</a></li>
+													<li><a href="./data/vALL_graph/'.$row["SNP.chr"].'/'.$row["vALL_graph_pdf"].'" download>vALL Graph (.pdf)</a></li>
 													<li><a href="./img/hsm_legend.png" download>Legend</a></li>
 													<li><a href="./img/hsm_legend_extended.png">Extended Legend</a></li>
 												</ul>

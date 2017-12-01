@@ -517,7 +517,7 @@ gets the SQL query needed to retrieve the download page contents and the page ti
 function get_download_file($type)
 {
 	#$out['sql'] = "SELECT $type AS 'file' FROM files";
-	$out['sql'] = "SELECT epigenome.files.2FOLL_graph_png as 'file', epigenome.SNP.chr FROM epigenome.files, epigenome.SNP WHERE epigenome.SNP.SNP = epigenome.files.SNP ORDER BY epigenome.SNP.chr";
+	$out['sql'] = "SELECT epigenome.files.".$type." as 'file', epigenome.SNP.chr FROM epigenome.files, epigenome.SNP WHERE epigenome.SNP.SNP = epigenome.files.SNP ORDER BY epigenome.SNP.chr";
 	$out['title'] = "Download $type";
 	return $out;
 }

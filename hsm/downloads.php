@@ -21,18 +21,18 @@
 			<h2>Results For Individual Loci</h2>
 			<ul>
 				<!--<li><a href="./data/dataFilesChr/">All Data files - by Chromosome</a></li>-->
-				<li><a href="download.php?type=1DISC_reslt_txt">1DISC Data files - by SNP</a></li>
-				<li><a href="download.php?type=1DISC_graphs_png">1DISC p-Value Graphs (.png) - by SNP</a></li>
-				<li><a href="download.php?type=1DISC_graphs_pdf">1DISC p-Value Graphs (.pdf) - by SNP</a></li>
-				<li><a href="download.php?type=2FOLL_reslt_txt">2FOLL Data files - by SNP</a></li>
-				<li><a href="download.php?type=2FOLL_graphs_png">2FOLL p-Value Graphs (.png) - by SNP</a></li>
-				<li><a href="download.php?type=2FOLL_graphs_pdf">2FOLL p-Value Graphs (.pdf) - by SNP</a></li>
-				<li><a href="download.php?type=3REPL_reslt_txt">3REPL Data files - by SNP</a></li>
-				<li><a href="download.php?type=3REPL_graphs_png">3REPL p-Value Graphs (.png) - by SNP</a></li>
-				<li><a href="download.php?type=3REPL_graphs_pdf">3REPL p-Value Graphs (.pdf) - by SNP</a></li>
-				<li><a href="download.php?type=vALL_reslt_txt">vALL Data files - by SNP</a></li>
-				<li><a href="download.php?type=vALL_graphs_png">vALL p-Value Graphs (.png) - by SNP</a></li>
-				<li><a href="download.php?type=vALL_graphs_pdf">vALL p-Value Graphs (.pdf) - by SNP</a></li>
+				<li><a href="download.php?type=1DISC_result_txt">1DISC Data files - by SNP</a></li>
+				<li><a href="download.php?type=1DISC_graph_png">1DISC p-Value Graphs (.png) - by SNP</a></li>
+				<li><a href="download.php?type=1DISC_graph_pdf">1DISC p-Value Graphs (.pdf) - by SNP</a></li>
+				<li><a href="download.php?type=2FOLL_result_txt">2FOLL Data files - by SNP</a></li>
+				<li><a href="download.php?type=2FOLL_graph_png">2FOLL p-Value Graphs (.png) - by SNP</a></li>
+				<li><a href="download.php?type=2FOLL_graph_pdf">2FOLL p-Value Graphs (.pdf) - by SNP</a></li>
+				<li><a href="download.php?type=3REPL_result_txt">3REPL Data files - by SNP</a></li>
+				<li><a href="download.php?type=3REPL_graph_png">3REPL p-Value Graphs (.png) - by SNP</a></li>
+				<li><a href="download.php?type=3REPL_graph_pdf">3REPL p-Value Graphs (.pdf) - by SNP</a></li>
+				<li><a href="download.php?type=vALL_result_txt">vALL Data files - by SNP</a></li>
+				<li><a href="download.php?type=vALL_graph_png">vALL p-Value Graphs (.png) - by SNP</a></li>
+				<li><a href="download.php?type=vALL_graph_pdf">vALL p-Value Graphs (.pdf) - by SNP</a></li>
 			</ul>
 		</div>
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
