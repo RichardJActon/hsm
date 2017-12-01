@@ -29,7 +29,7 @@
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<div class="page-header">
 				<h1><?php echo '<a href="./download.php?type='.$type.'">'.$title.'</a>';?></h1>
-				<a href=".downloads.php">back to downloads</a>
+				<a href="./downloads.php">back to downloads</a>
 			</div>
 		</div>
 
