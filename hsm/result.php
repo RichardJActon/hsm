@@ -26,13 +26,11 @@
 		die("<div class='alert alert-danger'><strong>ERROR!</strong> Search missing or invalid.</div>");
 	}
 
-	$dataset; /*VALIDATE*/
+	$dataset = "1DISC"; /*VALIDATE*/
 	if (defined($_GET['dataset'])) 
 	{
 		$dataset = $_GET['dataset'];
-	} else {
-		$dataset = "1DISC";
-	}
+	} 
 	$dataDir = $dataset.'_graphs_png';
 ?>
 
