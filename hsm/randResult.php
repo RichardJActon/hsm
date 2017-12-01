@@ -17,7 +17,7 @@
 	$result1 = $conn->query($sql1);
 	$row1 = $result1->fetch_assoc();
 
-	header("Location: ./result.php?searchTerm=".$row1['SNP']);
+	header("Location: ./result.php?searchTerm=".$row1['SNP']); /*1DISC?*/
 	mysqli_close($conn);
 	exit;
 ?>
