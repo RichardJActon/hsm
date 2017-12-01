@@ -25,12 +25,7 @@
 
 <?php
 	/*get total number of results*/
-	$serverName = $databaseServer;
-	$userName = $databaseUserName;
-	$password = $databasePassword;
-	$database = $databaseName;
-	
-	$conn = mysqli_connect($serverName, $userName, $password, $database);
+	$conn = mysqli_connect($databaseServer,$databaseName,$databaseUserName,$databasePassword);
 	if(!$conn)
 	{
 		die("<div class='alert alert-danger'><strong>ERROR!</strong> MYSQL connection failed: " . mysqli_connect_error()."</div>");
@@ -68,7 +63,7 @@
 	$sql = 'SELECT SNP.SNP,SNP.chr AS "SNP.chr",SNP.start AS "SNP.start",SNP.stop AS "SNP.stop",LD_Block.chr AS "ld.chr",LD_Block.start AS "ld.start",LD_Block.stop AS "ld.stop"  FROM SNP,RefSNPpairs,LD_Block WHERE RefSNPpairs.SNP IN("rs7531118","rs1516725","rs180242","rs2388896","rs6469804","rs4147929","rs10499194","rs3129934","rs2248359","rs17356907","rs2823093","rs3802842","rs45430","rs4775302") AND RefSNPpairs.Ref_SNP=LD_Block.Ref_SNP  AND RefSNPpairs.SNP = SNP.SNP ORDER BY length(SNP.chr),SNP.chr,SNP.start LIMIT '.$start.','.$limit;
 
 	/* get results list*/	
-	$array = get_list($sql,$start);
+	$array = get_list($sql,$start,$databaseServer,$databaseName,$databaseUserName,$databasePassword);
 
 	/*print title with pagination links*/
 	echo '

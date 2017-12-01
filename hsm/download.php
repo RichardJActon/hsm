@@ -33,7 +33,7 @@
 		</div>
 
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-		<?php get_downloads($sql,$type); ?>
+		<?php get_downloads($sql,$type,$databaseServer,$databaseName,$databaseUserName,$databasePassword); ?>
 		</div>
 		
 	</div>

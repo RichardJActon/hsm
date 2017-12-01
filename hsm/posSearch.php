@@ -60,12 +60,7 @@
 	//$new_query_string = http_build_query($params);
 
 	/*get total number of results*/
-	$serverName = $databaseServer;
-	$userName = $databaseUserName;
-	$password = $databasePassword;
-	$database = $databaseName;
-
-	$conn = mysqli_connect($serverName, $userName, $password, $database);
+	$conn = mysqli_connect($databaseServer,$databaseName,$databaseUserName,$databasePassword);
 	if(!$conn)
 	{
 		
@@ -102,7 +97,7 @@
 	//echo "<p>$sql</p>";	
 
 	/* get results list*/	
-	$array = get_list($sql,$start);
+	$array = get_list($sql,$start,$databaseServer,$databaseName,$databaseUserName,$databasePassword);
 
 	/*print title with pagination links*/
 	echo '
