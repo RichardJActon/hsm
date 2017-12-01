@@ -233,7 +233,7 @@
 						</div>
 						<div id="manhattan" class="panel-collapse collapse in">
 							<div class="panel-body">
-								<img src="./data/'.$datDir.'/'.$row["SNP.chr"].'/'.$row[$dataDir].'" style="width:100%" alt="manhattan">
+								<img src="./data/'.$datDir.'/'.$row["SNP.chr"].'/'. $dataDir .'" style="width:100%" alt="manhattan">
 							</div>
 						</div>
 					</div>
@@ -243,6 +243,8 @@
 		</div>
 	</div>
 	';};
+
+echo $dataDir;
 
 	/*Print a warning if a SNP returns more than 1 result*/
 	if ($LDcount > 1) 
