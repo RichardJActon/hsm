@@ -233,7 +233,7 @@
 						</div>
 						<div id="manhattan" class="panel-collapse collapse in">
 							<div class="panel-body">
-								<img src="./data/'.$datDir.'/'.$row["SNP.chr"].'/'. $dataDir .'" style="width:100%" alt="manhattan">
+								<img src="./data/'.$dataDir.'/'.$row["SNP.chr"].'/'. $row['$dataDir'] .'" style="width:100%" alt="manhattan">
 							</div>
 						</div>
 					</div>
