@@ -38,12 +38,7 @@
 
 <?php 
 	/*Connect to database and check connection*/
-	$serverName = $databaseServer;
-	$userName = $databaseUserName;
-	$password = $databasePassword;
-	$database = $databaseName;
-
-	$conn = mysqli_connect($serverName, $userName, $password, $database);
+	$conn = mysqli_connect($databaseServer, $databaseUserName, $databasePassword, $databaseName);
 	if(!$conn)
 	{
 		die("<div class='alert alert-danger'><strong>ERROR!</strong> MYSQL connection failed: " . mysqli_connect_error()."</div>");
@@ -238,7 +233,7 @@
 						</div>
 						<div id="manhattan" class="panel-collapse collapse in">
 							<div class="panel-body">
-								<img src="./data/'.$datDir.'/'.$row["SNP.chr"].'/'.$row["$dataDir"].'" style="width:100%" alt="manhattan">
+								<img src="./data/'.$datDir.'/'.$row["SNP.chr"].'/'.$row[$dataDir].'" style="width:100%" alt="manhattan">
 							</div>
 						</div>
 					</div>
