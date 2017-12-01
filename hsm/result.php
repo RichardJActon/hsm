@@ -107,7 +107,8 @@
 								<div class="container-fluid">
 									<div class="row-fluid">
 										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-											<p>Get data as .txt.gz or image as .png or .pdf</p>
+											<p>Download data as .txt.gz or image (png or pdf)</p>
+											<p>Select Dataset see <a href="./about.php">About</a> for details</p>
 										</div>
 										<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
 											<div class="btn-group">
