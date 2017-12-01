@@ -45,7 +45,7 @@
 	}
 	
 	/*query to retrieve filenames, LD block info and position info for a SNP*/
-	$sql = 'SELECT epigenome.files.1DISC_result_txt, epigenome.files.1DISC_graph_png, epigenome.files.1DISC_graph, epigenome.files.2FOLL_result_txt, epigenome.files.2FOLL_graph_png, epigenome.files.2FOLL_graph, epigenome.files.3REPL_result_txt, epigenome.files.3REPL_graph_png, epigenome.files.3REPL_graph, epigenome.files.vALL_result_txt, epigenome.files.vALL_graph_png, epigenome.files.vALL_graph, epigenome.SNP.SNP,epigenome.SNP.chr AS "SNP.chr",epigenome.SNP.start AS "SNP.start",epigenome.SNP.stop AS "SNP.stop",epigenome.LD_Block.chr AS "ld.chr",epigenome.LD_Block.start AS "ld.start",epigenome.LD_Block.stop AS "ld.stop" FROM epigenome.SNP,epigenome.RefSNPpairs,epigenome.LD_Block,files WHERE RefSNPpairs.SNP = "'. $pos[0] . '" AND RefSNPpairs.Ref_SNP=LD_Block.Ref_SNP AND RefSNPpairs.SNP = SNP.SNP AND files.SNP=SNP.SNP;';
+	$sql = 'SELECT epigenome.files.1DISC_result_txt, epigenome.files.1DISC_graph_png, epigenome.files.1DISC_graph, epigenome.files.2FOLL_result_txt, epigenome.files.2FOLL_graph_png, epigenome.files.2FOLL_graph, epigenome.files.3REPL_result_txt, epigenome.files.3REPL_graph_png, epigenome.files.3REPL_graph, epigenome.files.vAll_result_txt, epigenome.files.vAll_graph_png, epigenome.files.vAll_graph, epigenome.SNP.SNP,epigenome.SNP.chr AS "SNP.chr",epigenome.SNP.start AS "SNP.start",epigenome.SNP.stop AS "SNP.stop",epigenome.LD_Block.chr AS "ld.chr",epigenome.LD_Block.start AS "ld.start",epigenome.LD_Block.stop AS "ld.stop" FROM epigenome.SNP,epigenome.RefSNPpairs,epigenome.LD_Block,files WHERE RefSNPpairs.SNP = "'. $pos[0] . '" AND RefSNPpairs.Ref_SNP=LD_Block.Ref_SNP AND RefSNPpairs.SNP = SNP.SNP AND files.SNP=SNP.SNP;';
 
 	$result = $conn->query($sql);
 	
@@ -126,9 +126,9 @@
 													<li><a href="./data/3REPL_result_txt/'.$row["SNP.chr"].'/'.$row["3REPL_result_txt"].'" download>3REPL Data</a></li>
 													<li><a href="./data/3REPL_graph_png/'.$row["SNP.chr"].'/'.$row["3REPL_graph_png"].'" download>3REPL Graph (.png)</a></li>
 													<li><a href="./data/3REPL_graph/'.$row["SNP.chr"].'/'.$row["3REPL_graph"].'" download>3REPL Graph (.pdf)</a></li>
-													<li><a href="./data/vALL_result_txt/'.$row["SNP.chr"].'/'.$row["vALL_result_txt"].'" download>vALL Data</a></li>
-													<li><a href="./data/vALL_graph_png/'.$row["SNP.chr"].'/'.$row["vALL_graph_png"].'" download>vALL Graph (.png)</a></li>
-													<li><a href="./data/vALL_graph/'.$row["SNP.chr"].'/'.$row["vALL_graph"].'" download>vALL Graph (.pdf)</a></li>
+													<li><a href="./data/vAll_result_txt/'.$row["SNP.chr"].'/'.$row["vAll_result_txt"].'" download>vAll Data</a></li>
+													<li><a href="./data/vAll_graph_png/'.$row["SNP.chr"].'/'.$row["vAll_graph_png"].'" download>vAll Graph (.png)</a></li>
+													<li><a href="./data/vAll_graph/'.$row["SNP.chr"].'/'.$row["vAll_graph"].'" download>vAll Graph (.pdf)</a></li>
 													<li><a href="./img/hsm_legend.png" download>Legend</a></li>
 													<li><a href="./img/hsm_legend_extended.png">Extended Legend</a></li>
 												</ul>
@@ -143,7 +143,7 @@
 													<li><a href="./result.php?searchTerm=' .$row["SNP"]. '&dataset=1DISC">1DISC Data</a></li>
 													<li><a href="./result.php?searchTerm=' .$row["SNP"]. '&dataset=2FOLL">2FOLL Data</a></li>
 													<li><a href="./result.php?searchTerm=' .$row["SNP"]. '&dataset=3REPL">3REPL Data</a></li>
-													<li><a href="./result.php?searchTerm=' .$row["SNP"]. '&dataset=vALL">vALL Data</a></li>
+													<li><a href="./result.php?searchTerm=' .$row["SNP"]. '&dataset=vAll">vAll Data</a></li>
 												</ul>
 											</div>
 										</div>

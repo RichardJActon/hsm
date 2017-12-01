@@ -22,7 +22,7 @@ LOAD DATA LOCAL INFILE 'DatabaseTablesData/files.txt' INTO TABLE files
 FIELDS TERMINATED BY '\t'
 LINES TERMINATED BY '\n'
 /*IGNORE 1 LINES*/
-(SNP, 1DISC_graph_png, 1DISC_result_txt, 1DISC_graph, 2FOLL_graph_png, 2FOLL_result_txt, 2FOLL_graph, 3REPL_graph_png, 3REPL_result_txt, 3REPL_graph, vALL_graph_png, vALL_result_txt, vALL_graph);
+(SNP, 1DISC_graph_png, 1DISC_result_txt, 1DISC_graph, 2FOLL_graph_png, 2FOLL_result_txt, 2FOLL_graph, 3REPL_graph_png, 3REPL_result_txt, 3REPL_graph, vAll_graph_png, vAll_result_txt, vAll_graph);
 
 LOAD DATA LOCAL INFILE 'DatabaseTablesData/annotationIDpairs.txt' INTO TABLE annotationIDpairs
 FIELDS TERMINATED BY '\t'

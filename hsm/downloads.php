@@ -30,9 +30,9 @@
 				<li><a href="./download.php?type=3REPL_result_txt">3REPL Data files - by SNP</a></li>
 				<li><a href="./download.php?type=3REPL_graph_png">3REPL p-Value Graphs (.png) - by SNP</a></li>
 				<li><a href="./download.php?type=3REPL_graph">3REPL p-Value Graphs (.pdf) - by SNP</a></li>
-				<li><a href="./download.php?type=vALL_result_txt">vALL Data files - by SNP</a></li>
-				<li><a href="./download.php?type=vALL_graph_png">vALL p-Value Graphs (.png) - by SNP</a></li>
-				<li><a href="./download.php?type=vALL_graph">vALL p-Value Graphs (.pdf) - by SNP</a></li>
+				<li><a href="./download.php?type=vAll_result_txt">vAll Data files - by SNP</a></li>
+				<li><a href="./download.php?type=vAll_graph_png">vAll p-Value Graphs (.png) - by SNP</a></li>
+				<li><a href="./download.php?type=vAll_graph">vAll p-Value Graphs (.pdf) - by SNP</a></li>
 			</ul>
 		</div>
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
