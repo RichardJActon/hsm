@@ -110,7 +110,7 @@
 											<p>Download data as .txt.gz or image (png or pdf)</p>
 											<p>View Dataset (see <a href="./about.php">About</a> for details)</p>
 										</div>
-										<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+										<div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
 											<div class="btn-group">
 												<!--<button type="button" class="btn btn-primary">Download <span class="glyphicon glyphicon-download"></span></button>-->
 												<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
@@ -134,7 +134,7 @@
 												</ul>
 											</div>
 										</div>
-										<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+										<div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
 											<div class="btn-group">
 												<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
 													View <span class="caret"></span>
