@@ -124,7 +124,7 @@
 													<li><a href="./data/2FOLL_graph/'.$row["SNP.chr"].'/'.$row["2FOLL_graph"].'" download>2FOLL Graph (.pdf)</a></li>
 													<li><a href="./data/3REPL_result_txt/'.$row["SNP.chr"].'/'.$row["3REPL_result_txt"].'" download>3REPL Data</a></li>
 													<li><a href="./data/3REPL_graph_png/'.$row["SNP.chr"].'/'.$row["3REPL_graph_png"].'" download>3REPL Graph (.png)</a></li>
-													<li><a href="./data/3REPL_graph/'.$row["3REPL_graph"].'" download>3REPL Graph (.pdf)</a></li>
+													<li><a href="./data/3REPL_graph/'.$row["SNP.chr"].'/'.$row["3REPL_graph"].'" download>3REPL Graph (.pdf)</a></li>
 													<li><a href="./data/vALL_result_txt/'.$row["SNP.chr"].'/'.$row["vALL_result_txt"].'" download>vALL Data</a></li>
 													<li><a href="./data/vALL_graph_png/'.$row["SNP.chr"].'/'.$row["vALL_graph_png"].'" download>vALL Graph (.png)</a></li>
 													<li><a href="./data/vALL_graph/'.$row["SNP.chr"].'/'.$row["vALL_graph"].'" download>vALL Graph (.pdf)</a></li>
