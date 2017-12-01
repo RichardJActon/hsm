@@ -3,7 +3,7 @@ hsm2
 */
 /*DROP DATABASE IF EXISTS hsm2;
 CREATE DATABASE hsm2;*/
-USE hsm2;
+USE epigenome;
 
 DROP TABLE IF EXISTS LD_Block;
 DROP TABLE IF EXISTS RefSNPpairs;
