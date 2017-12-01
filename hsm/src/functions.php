@@ -254,19 +254,10 @@ generates the html for search multiple results, starting from a set result numbe
 NB uses a MYSQL connection (makes 2 requests per initial result from an initial request)
 
 */
-function get_list($sqli,$start)
-{
-	$databaseServer = "srv01779.soton.ac.uk:3306";
-	$databaseName = "epigenome";
-	$databaseUserName = "epigenome_ro";
-	$databasePassword = "3dfa315f63c477d4f2f68bac84eaa7e7f135da26";
-	
-	$serverName = $databaseServer;
-	$userName = $databaseUserName;
-	$password = $databasePassword;
-	$database = $databaseName;
+function get_list($sqli,$start,$databaseServer,$databaseName,$databaseUserName,$databasePassword)
+{	
 
-	$conn = mysqli_connect($serverName, $userName, $password, $database);
+	$conn = mysqli_connect($databaseServer, $databaseUserName, $databasePassword, $databaseName);
 	if(!$conn)
 	{
 		//$html = "<div class='alert alert-danger'><strong>ERROR!</strong> MYSQL connection failed: " . mysqli_connect_error()."</div>";
@@ -464,13 +455,8 @@ function createLinks($links,$list_class,$limit,$total,$page,$base)
 generates unordered html list of link to files for download based on a sql query.
 
 */
-function get_downloads($sql,$type)
+function get_downloads($sql,$type,$databaseServer,$databaseName,$databaseUserName,$databasePassword )
 {
-	$databaseServer = "srv01779.soton.ac.uk:3306";
-	$databaseName = "epigenome";
-	$databaseUserName = "epigenome_ro";
-	$databasePassword = "3dfa315f63c477d4f2f68bac84eaa7e7f135da26";
-
 	$conn = mysqli_connect($databaseServer, $databaseUserName, $databasePassword, $databaseName);
 	if(!$conn)
 	{
@@ -482,7 +468,7 @@ function get_downloads($sql,$type)
 	$res = $conn->query($sql);
 	while ($row = $res->fetch_assoc()) 
 	{
-		$Rhtml .= '	<li><a href="./data/'. $type .'/' . $row["file"].'"</a>'. $row["file"].'</li>'."\n";
+		$Rhtml .= '	<li><a href="./data/'. $type .'/'. $row["chr"] .'/'. $row["file"].'"</a>'. $row["file"].'</li>'."\n";
 	};
 	$Rhtml .= "</ul>\n";
 	echo $Rhtml;
@@ -530,7 +516,8 @@ gets the SQL query needed to retrieve the download page contents and the page ti
 */
 function get_download_file($type)
 {
-	$out['sql'] = "SELECT $type AS 'file' FROM files";
+	#$out['sql'] = "SELECT $type AS 'file' FROM files";
+	$out['sql'] = "SELECT epigenome.files.2FOLL_graph_png as 'file', epigenome.SNP.chr FROM epigenome.files, epigenome.SNP WHERE epigenome.SNP.SNP = epigenome.files.SNP ORDER BY epigenome.SNP.chr";
 	$out['title'] = "Download $type";
 	return $out;
 }
