@@ -234,7 +234,9 @@
 						</div>
 						<div id="manhattan" class="panel-collapse collapse in">
 							<div class="panel-body">
-								<img src="./data/'.$dataDir.'/'.$row["SNP.chr"].'/'. $row[$dataDir] .'" style="width:100%" alt="manhattan">
+								<a href="./data/'.$dataDir.'/'.$row["SNP.chr"].'/'. $row[$dataDir] .'">
+									<img src="./data/'.$dataDir.'/'.$row["SNP.chr"].'/'. $row[$dataDir] .'" style="width:100%" alt="manhattan">
+								</a>
 							</div>
 						</div>
 					</div>
